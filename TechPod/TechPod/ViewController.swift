@@ -31,7 +31,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 		songNameArray = ["カノン", "エリーゼのために", "G線上のアリア"]
 		
 		// fileNameArrayにファイル名を入れていく
-		fileNameArray = ["cannon", "elise", "aria"]
+		fileNameArray = ["cannon", "else", "aria"]
 		
 		// imageNameArrayに曲の画像を入れていく
 		imageNameArray = ["Pachelbel.jpg", "Beethoven.jpg", "Bach.jpg"]
