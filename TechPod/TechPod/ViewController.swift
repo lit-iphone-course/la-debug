@@ -46,14 +46,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 	
 	// ID付きのセルを取得して、セル付属のtextLabelに「テスト」と表示させてみる
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
+		let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
 		
 		// セルにsongNameArrayの曲名を表示する
-		cell?.textLabel?.text = songNameArray[indexPath.row]
+		cell.textLabel?.text = songNameArray[indexPath.row]
 		
 		// セルに音楽家の画像を表示する
-		cell?.imageView?.image = UIImage(named: imageNameArray[indexPath.row])
-		return cell!
+		cell.imageView?.image = UIImage(named: imageNameArray[indexPath.row])
+		return cell
 	}
 	
 	// セルが押された時に呼ばれるメソッド

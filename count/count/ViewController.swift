@@ -2,31 +2,33 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var countNumber: Int = 0
-    @IBOutlet var countLabel: UILabel!
+    @IBOutlet var label: UILabel!
+    var number: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
+    
     @IBAction func plus(){
-        countNumber += 1
-        judge()
-        countLabel.text = String(countNumber)
+        number += 1
+        updateColor()
+        label.text = String(number)
     }
 
     @IBAction func minus() {
-        countNumber -= 1
-        judge()
-        countLabel.text = String(countNumber)
+        number -= 1
+        updateColor()
+        label.text = String(number)
     }
-    func judge(){
-        if(countNumber >= 5){
-            countLabel.textColor = UIColor.red
-        }else if(countNumber >= 10){
-            countLabel.textColor = UIColor.green
-        }else if(countNumber >= 15){
-            countLabel.textColor = UIColor.blue
+    
+    func updateColor(){
+        number += 1
+        if number >= 5 {
+            label.textColor = .red
+        } else if number >= 10 {
+            label.textColor = .green
+        } else if number >= 15 {
+            label.textColor = .blue
         }
     }
 }
-
